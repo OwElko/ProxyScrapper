@@ -1,6 +1,6 @@
 typer
 requests
 lxml
-json
+jsonlib
 re
 base64
