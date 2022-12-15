@@ -2,5 +2,5 @@ typer
 requests
 lxml
 jsonlib
-re
-base64
+regex
+pybase64
