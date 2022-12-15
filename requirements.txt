@@ -1,0 +1,6 @@
+typer
+requests
+lxml
+json
+re
+base64
