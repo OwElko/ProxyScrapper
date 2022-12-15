@@ -42,7 +42,7 @@ def main(output_file: str):
     for softdid in softdid_items:
         iterations.append(softdid)
 
-    typer.echo('Saving proxies...')
+    typer.echo('OwElko Scraping proxies...')
     with typer.progressbar(iterations) as progress:
         for item in progress:
             if item['site'] == 'free_proxy_cz':
@@ -51,7 +51,7 @@ def main(output_file: str):
                 geonode(item['url'], output_file)
             if item['site'] == 'didsoft':
                 didsoft(item['url'], output_file)
-    typer.echo("Done!")
+    typer.echo("Proxies Saved!")
 
 
 if __name__ == "__main__":
