@@ -38,7 +38,7 @@ def didsoft(url, output_file):
             ip_address = entry.getchildren()[0].text_content()
             port = entry.getchildren()[1].text_content()
             if is_ip_address(ip_address):
-                file.write(f'{ip_address}|{port}\n')
+                file.write(f'{ip_address}:{port}\n')
 
 
 def geonode(url, output_file):
@@ -47,7 +47,7 @@ def geonode(url, output_file):
         for entry in entries['data']:
             ip_address = entry['ip']
             port = entry['port']
-            file.write(f'{ip_address}|{port}\n')
+            file.write(f'{ip_address}:{port}\n')
 
 
 def free_proxy_cz(url, output_file):
@@ -60,7 +60,7 @@ def free_proxy_cz(url, output_file):
                     r'decode\(\"([a-zA-Z0-9\=]+)\"\)\)(\d+)', encoded_string)
                 ip_address = b64decode(ip_data.group(1)).decode('utf-8')
                 port = ip_data.group(2)
-                file.write(f'{ip_address}|{port}\n')
+                file.write(f'{ip_address}:{port}\n')
 
 
 def main():
