@@ -1,6 +1,6 @@
 typer
 requests
 lxml
-jsonlib
+pipwin
 regex
 pybase64
